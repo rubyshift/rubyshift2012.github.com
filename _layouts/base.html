@@ -5,8 +5,8 @@
     <title>RubyShift 2012{% if page.title %} - {{ page.title }}{% endif %}</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no" name="viewport">
-    <link href="../stylesheets/bootstrap.css" rel="stylesheet">
-    <link href="../stylesheets/screen.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/screen.css" rel="stylesheet">
   </head>
   <body>
     <header class="container">
@@ -31,6 +31,7 @@
       {% for post in site.posts reversed %}
         <section id="{{ post.slug }}">
           <div class="container">
+            {{ if post.title }}<h2>{{ post.title }}</h2>{{ endif }}
             {{ post.content }}
           </div>
         </section>
