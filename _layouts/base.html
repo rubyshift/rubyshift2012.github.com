@@ -28,10 +28,19 @@
       </div>
     </header>
     <div role="main" id="main">
+      <section id="summary">
+        <div class="container">
+          <p>
+            RubyShift is an independent non-profit annual tech conference with an accent on making new friends, being inspired, and having fun.
+            This year we will be talking about Ruby, Clojure, JavaScript, NoSQL databases, messaging systems, scalability, and all things distributed.
+          </p>
+        </div>
+      </section>
+
       {% for post in site.posts reversed %}
         <section id="{{ post.slug }}">
           <div class="container">
-            {{ if post.title }}<h2>{{ post.title }}</h2>{{ endif }}
+            <h2>{{ post.title }}</h2>
             {{ post.content }}
           </div>
         </section>
