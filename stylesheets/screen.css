@@ -30,3 +30,8 @@ section p:last-child { margin-bottom:0; }
 #sponsors .sponsor { display:inline-block; width:240px; height:85px; margin:0 20px 0 0; }
 #sponsors .sponsor-us { text-align:center; }
 #sponsors .sponsor-us p { font-size:16px; margin:20px auto 0; }
+
+#speakers .speaker { margin-bottom: 20px; }
+#speakers .speaker:last-child { margin-bottom: 0px; }
+#speakers .speaker h3 { font-size: 22px; }
+#speakers .speaker h4 { font-size: 18px; }
