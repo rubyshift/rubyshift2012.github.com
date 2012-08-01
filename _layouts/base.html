@@ -7,44 +7,158 @@
     <meta content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no" name="viewport">
     <link href="/stylesheets/bootstrap.css" rel="stylesheet">
     <link href="/stylesheets/screen.css" rel="stylesheet">
+    <link href="/stylesheets/leaflet.css" rel="stylesheet">
   </head>
   <body>
-    <header class="container">
-      <div class="row">
-        <div id="cfp-call-to-action" class="span3">
-          <a href="https://rubyshift2012.busyconf.com/proposals/new">Call for Papers</a>
-        </div>
-        <div id="branding" class="span6">
-          <h1><a href="http://rubyshift.org">RubyShift 2012</a></h1>
-          <p>
-            3rd annual<br>
-            September 29th & 30th<br>
-            Kiev, Ukraine
-          </p>
-        </div>
-        <div id="reg-call-to-action" class="span3">
-          <a href="#tickets">Buy Tickets</a>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div id="branding" class="span6 offset3">
+            <h1><a href="http://rubyshift.org">RubyShift 2012</a></h1>
+          </div>
+          <ul class="unstyled span12">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#tickets">Tickets</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
         </div>
       </div>
     </header>
+
     <div role="main" id="main">
-      <section id="summary">
+      <section id="overview">
         <div class="container">
           <p>
-            RubyShift is an independent non-profit annual tech conference with an accent on making new friends, being inspired, and having fun.
-            This year we will be talking about Ruby, Clojure, JavaScript, NoSQL databases, messaging systems, scalability, and all things distributed.
+            We are proud to present you 3rd annual RubyShift 2012, an independent non-profit conference on Ruby, Clojure, NoSQL, and satellite technologies with accent on making new friends, being inspired, and having fun.
+          </p>
+          <p>
+            RubyShift 2012 will be held on Saturday and Sunday, September 29—30 in Kiev, Ukraine.
           </p>
         </div>
       </section>
 
-      {% for post in site.posts reversed %}
-        <section id="{{ post.slug }}">
-          <div class="container">
-            <h2>{{ post.title }}</h2>
-            {{ post.content }}
+      <section id="speakers">
+        <div class="container">
+          <h2>Speakers</h2>
+          <div class="speaker row">
+            <div class="photo span2">
+              <img src="/images/p-alex.jpg">
+            </div>
+            <div class="talk span10">
+              <h3>Alexey Vasiliev</h3>
+              <h4>PostgreSQL in Highload Projects</h4>
+              <p>
+                PostgreSQL is a feature-packed relational database that every Rails developer should consider using. Why? I will discuss the main reasons of using this database in this talk.
+              </p>
+              <p>
+                Alexey Vasiliev is a software engineer at Railsware in Kiev. He's developed such products, as: <a href="http://popcornua.coocoorooza.com/">PopCornUA</a> (android and iphone applications), <a href="http://mongodb-logger.catware.org/">MongodbLogger</a> (logger for Rails), <a href="http://blog.railsware.com/2012/04/12/shared-mustache-templates-for-rails-3/">SmtRails</a> (shared mustache templates for Rails), <a href="http://piro.railsware.com/">PIRO</a> (the rocket for pivotal tracker account) and many others. Also Alexey is a creator of Open Source training manual for setting up and scaling of <a href="http://postgresql.leopard.in.ua/">PostgreSQL in Russian</a>.
+              </p>
+            </div>
           </div>
-        </section>
-      {% endfor %}
+
+          <div class="speaker row">
+            <div class="photo span2">
+              <img src="/images/p-alvaro.jpg" width="140px">
+            </div>
+            <div class="talk span10">
+              <h3>Alvaro Videla</h3>
+              <h4>To Be Announced</h4>
+              <p>
+                Alvaro works for Liip AG in Switzerland as Software Developer. Before moving to Europe he used to work in Shanghai were he helped building one of Germany biggest dating websites. He co-authored the book "RabbitMQ in Action" for Manning Publishing. Some of his open source projects can be found here: <a href="http://github.com/videlalvaro">http://github.com/videlalvaro</a>. Apart from code related stuff he likes travelling with his wife, listening/playing music and reading books.
+              </p>
+            </div>
+          </div>
+
+          <div class="speaker row">
+            <div class="photo span2">
+              <img src="/images/p-nick.jpg">
+            </div>
+            <div class="talk span10">
+              <h3>Nick Sutterer</h3>
+              <h4>Off The Tracks — Challenging The Rails Mindset</h4>
+              <p>
+                Nick Sutterer is proud to be a member of the Ruby open source community. His Cells and Apotomo projects have been bringing increased view modularity and event-driven programming to Rails for years. He has enjoyed attending, and speaking at, Ruby conferences around the world. Buy him a beer sometime, and with very little prompting, he will tell you why there should be no such thing as a double-render error, why you should not confuse your models with your resources, and how to play a mean bass in a punk rock band.
+              </p>
+            </div>
+          </div>
+
+          <div class="speaker row">
+            <div class="photo span2">
+              <img src="/images/p-solnic.png">
+            </div>
+            <div class="talk span10">
+              <h3>Piotr Solnica</h3>
+              <h4>To Be Announced</h4>
+              <p>
+                Piotr Solnica is a software developer based in Kraków, Poland. He's been using Ruby as his main language of choice since 2005. He's a member of DataMapper Core Team and a contributor to many open source projects. He's a big fan of OOP and clean code and likes to blog about it at solnic.eu.
+              </p>
+            </div>
+          </div>
+
+          <div class="speaker row">
+            <div class="photo span2">
+              <img src="/images/p-roy.jpg">
+            </div>
+            <div class="talk span10">
+              <h3>Roy Tomeij</h3>
+              <h4>Modular & Reusable Front-End Code with HTML5, Sass and CoffeeScript</h4>
+              <p>A lot of Ruby developers use Rails for their everyday projects. Often they toy around with front-end themselves or outsource it, ending up tangled in a web of css-all-over-the-place.</p>
+              <p>Keeping your front-end code clean is hard. Before you know it you're suffering from CSS specificity issues and not-really-generic partials. Find out how to keep things tidy using the HTML5 document outline and modular Sass & CoffeeScript, for truly reusable code.</p>
+            </div>
+          </div>
+
+          <div class="speaker row">
+            <div class="photo span2">
+              <img src="/images/p-klishin.jpg">
+            </div>
+            <div class="talk span10">
+              <h3>Michael Klishin</h3>
+              <h4>Becoming an Immutant: A Year with Clojure</h4>
+              <p>Over a year ago I switched to using Clojure as my primary language. This will be very much an experience report: you will learn what is great about it, what isn't, how it changed my perspective on software development, simplicity, concurrency and alien life forms.</p>
+              <p>Michael is a serial OSS contributor, travis-ci.org core team member, trance music lover who is passionate about JVM languages, concurrency, studying (natural) languages, data and writing boring bio blurbs for conferences.</p>
+            </div>
+          </div>
+
+          <div class="speaker row">
+            <div class="photo span2">
+              <img src="/images/p-tjeden.jpg">
+            </div>
+            <div class="talk span10">
+              <h3>Aleksander Dąbrowski</h3>
+              <h4>Sinatra Autopsy</h4>
+              <p>Since medieval, autopsy of dead corpse was the best way of learning how human body works. We will use the same technique, examinating Sinatra, to learn how to write better code. With its 1740 lines of code, this piece of software is great example of Ruby application. We will see what jewels are hiding in its chest, notice some good practice, but also we will take a look at bad and stinky parts. Since Aleksander's only commit to Sinatra was concerned documentation, he is the right person to lead the autopsy. He will look at Sinatra with the fresh eye. Konstanin Haase won't get any hurt (probably).</p>
+            </div>
+          </div>
+
+          <div class="speaker row">
+            <div class="photo span2">
+              <img src="/images/p-lourens.png">
+            </div>
+            <div class="talk span10">
+              <h3>Lourens Naudé</h3>
+              <h4>ZeroMQ: Scriptable sockets</h4>
+              <p>ZeroMQ is a socket abstraction and concurrency framework that's changing the way we think and reason about distributed systems. Mailboxes, atomic message delivery and swappable transports allow for fast, flexible and resilient network topologies. It's I/O model also sits very well with all Ruby implementations.</p>
+              <p>Lourens is an independent consultant currently based in sunny Madeira Island, but originally from South Africa. He specializes in backend / platform / domain solutions and is well versed full stack, from VM to high level protocols and known for his offbeat Ruby patches and extensions. Current interests include disruptive communications technology like ZeroMQ / libxs and he is working on ZeroMQ monitoring features for better operations support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tickets">
+        <div class="container">
+          <h2>Tickets</h2>
+          <p>This year we have two ticket categories: an Individual ticket for $65 and Supporter ticket for $250. For Supporter one we'll place your logo on the web site and will give you a personal thank you from our team.</p>
+          <p>We do our best to be closer to the open-source community. Please drop us an email if you contribute or involved in organization of a local group and we'll get you a discount or a free ticket.</p>
+          <p>Last but not least, we are going to transfer 10% of our ticket revenue to an open-source project of choice to appreciate their hard work. You'll be prompted to choose one from the list on checkout. Feel free to ping us at <a href="http://twitter.com/rubyshift">@rubyshift</a> in case of questions.</p>
+
+          <div style="width:100%; text-align:left;" ><iframe  src="http://www.eventbrite.com/tickets-external?eid=2903984897&ref=etckt" frameborder="0" height="234" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; margin-top:-10px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Event registration</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://http://www.eventbrite.com/event/2903984897?ref=etckt">RubyShift 2012</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com?ref=etckt">Eventbrite</a></div></div>
+        </div>
+      </section>
+
+      <section id="location">
+        <div id="map" style="width:100%;height:600px;"></div>
+      </section>
 
       <section id="sponsors">
         <div class="container">
@@ -71,6 +185,7 @@
         </div>
       </section>
     </div>
+
     <footer>
       <p>
         <a href="http://bit.ly/ADVJil">2010 photos</a>
@@ -88,6 +203,7 @@
         <a href="http://www.svitla.com/">Svitla Systems</a>
       </p>
     </footer>
+
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-24069519-1']);
@@ -98,6 +214,26 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    </script>
+
+    <script src="/javascripts/leaflet.js"></script>
+
+    <script>
+      CM_ATTR = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+          '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+          'Imagery © <a href="http://cloudmade.com">CloudMade</a>';
+
+      CM_URL = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png';
+
+      VENUE = [50.451723, 30.522049];
+
+      var map = L.map('map').setView(VENUE, 16);
+      map.scrollWheelZoom.disable();
+
+      L.tileLayer(CM_URL, {attribution: CM_ATTR, styleId: 997}).addTo(map);
+      L.control.scale().addTo(map);
+
+      L.marker(VENUE).addTo(map).bindPopup("I am a third popup.");
     </script>
   </body>
 </html>
